@@ -1,4 +1,5 @@
 // app/layout.tsx
+import { Header } from "@/components/header";
 import "./globals.css";
 import { Poppins, Bebas_Neue } from "next/font/google";
 
@@ -28,7 +29,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${poppins.variable} ${bebas.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
