@@ -1,0 +1,112 @@
+[
+  {
+    "rodada": 1,
+    "realizada": true,
+    "jogos": [
+      {
+        "casa": "real-madruga-fc",
+        "fora": "brothers-fc",
+        "data": "2025-05-11",
+        "hora": "08:45",
+        "golsCasa": 0,
+        "golsFora": 3
+      },
+      {
+        "casa": "biscoito-fc",
+        "fora": "pcds-fc",
+        "data": "2025-05-11",
+        "hora": "09:45",
+        "golsCasa": 5,
+        "golsFora": 6
+      }
+    ]
+  },
+  {
+    "rodada": 2,
+    "realizada": false,
+    "jogos": [
+      {
+        "casa": "real-matismo-fc",
+        "fora": "biscoito-fc",
+        "data": "2025-05-25",
+        "hora": "08:45",
+        "golsCasa": null,
+        "golsFora": null
+      },
+      {
+        "casa": "real-madruga-fc",
+        "fora": "pcds-fc",
+        "data": "2025-05-25",
+        "hora": "09:45",
+        "golsCasa": null,
+        "golsFora": null
+      }
+    ]
+  },
+  {
+    "rodada": 3,
+    "realizada": false,
+    "jogos": [
+      {
+        "casa": "pcds-fc",
+        "fora": "real-matismo-fc",
+        "data": "2025-06-01",
+        "hora": "08:45",
+        "golsCasa": null,
+        "golsFora": null
+      },
+      {
+        "casa": "biscoito-fc",
+        "fora": "brothers-fc",
+        "data": "2025-06-01",
+        "hora": "09:45",
+        "golsCasa": null,
+        "golsFora": null
+      }
+    ]
+  },
+  {
+    "rodada": 4,
+    "realizada": false,
+    "jogos": [
+      {
+        "casa": "pcds-fc",
+        "fora": "brothers-fc",
+        "data": "2025-06-08",
+        "hora": "08:45",
+        "golsCasa": null,
+        "golsFora": null
+      },
+      {
+        "casa": "real-madruga-fc",
+        "fora": "real-matismo-fc",
+        "data": "2025-06-08",
+        "hora": "09:45",
+        "golsCasa": null,
+        "golsFora": null
+      }
+    ]
+  },
+  {
+    "rodada": 5,
+    "realizada": false,
+    "jogos": [
+      {
+        "casa": "real-madruga-fc",
+        "fora": "biscoito-fc",
+        "data": "2025-06-15",
+        "hora": "08:45",
+        "golsCasa": null,
+        "golsFora": null
+      },
+      {
+        "casa": "brothers-fc",
+        "fora": "real-matismo-fc",
+        "data": "2025-06-15",
+        "hora": "09:45",
+        "golsCasa": null,
+        "golsFora": null
+      }
+    ]
+  }
+]
