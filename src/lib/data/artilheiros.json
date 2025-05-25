@@ -1,0 +1,37 @@
+[
+  {
+    "jogador": "Daniel",
+    "time": "pcds-fc",
+    "gols": 3
+  },
+  {
+    "jogador": "Niltinho",
+    "time": "pcds-fc",
+    "gols": 2
+  },
+  {
+    "jogador": "Thomaz",
+    "time": "pcds-fc",
+    "gols": 1
+  },
+  {
+    "jogador": "Zé Marcelo",
+    "time": "biscoito-fc",
+    "gols": 3
+  },
+  {
+    "jogador": "Luiz Piquete",
+    "time": "biscoito-fc",
+    "gols": 1
+  },
+  {
+    "jogador": "Bruno César",
+    "time": "brothers-fc",
+    "gols": 2
+  },
+  {
+    "jogador": "Ulisses",
+    "time": "brothers-fc",
+    "gols": 1
+  }
+]

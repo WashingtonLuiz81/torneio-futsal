@@ -1,0 +1,22 @@
+[
+  {
+    "jogador": "Márcio",
+    "time": "pcds-fc",
+    "golsSofridos": 5
+  },
+  {
+    "jogador": "Barrozo",
+    "time": "biscoito-fc",
+    "golsSofridos": 6
+  },
+  {
+    "jogador": "Wanderson Gabriel",
+    "time": "real-madruga-fc",
+    "golsSofridos": 3
+  },
+  {
+    "jogador": "André",
+    "time": "brothers-fc",
+    "golsSofridos": 0
+  }
+]

@@ -2,31 +2,31 @@
   {
     "id": "real-matismo-fc",
     "nome": "Real Matismo F.C",
-    "icone": "/assets/times/real-matismo-fc.png",
+    "icone": "/assets/times/logo-real-matismo-fc.png",
     "cor": "#E63946"
   },
   {
     "id": "biscoito-fc",
     "nome": "Biscoito F.C",
-    "icone": "/assets/times/biscoito-fc.png",
+    "icone": "/assets/times/logo-biscoito-fc.png",
     "cor": "#F4A261"
   },
   {
     "id": "real-madruga-fc",
     "nome": "Real Madruga F.C",
-    "icone": "/assets/times/real-madruga-fc.png",
+    "icone": "/assets/times/logo-real-madruga-fc.png",
     "cor": "#2A9D8F"
   },
   {
     "id": "pcds-fc",
     "nome": "PCDS F.C",
-    "icone": "/assets/times/pcds-fc.png",
+    "icone": "/assets/times/logo-pcds-fc.png",
     "cor": "#264653"
   },
   {
     "id": "brothers-fc",
     "nome": "Brothers F.C",
-    "icone": "/assets/times/brothers-fc.png",
+    "icone": "/assets/times/logo-brothers-fc.png",
     "cor": "#457B9D"
   }
 ]
