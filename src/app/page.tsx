@@ -11,7 +11,7 @@ export default function Home() {
       <section className="relative h-[50vh] w-full">
         {/* Imagem de fundo */}
         <Image
-          src="/bg-futsal.jpg"
+          src="/assets/bg-futsal.jpg"
           alt="Futsal"
           fill
           className="object-cover"
