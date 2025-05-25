@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${poppins.variable} ${bebas.variable}`}>
-      <body>
+      <body className="min-h-screen flex flex-col justify-between">
         <Header />
         {children}
         <Footer />
