@@ -1,4 +1,3 @@
-// app/layout.tsx
 import { Header } from "@/components/header";
 import "./globals.css";
 import { Poppins, Bebas_Neue } from "next/font/google";
@@ -13,7 +12,7 @@ const poppins = Poppins({
 
 const bebas = Bebas_Neue({
   subsets: ["latin"],
-  weight: "400", // só tem um peso disponível
+  weight: "400",
   variable: "--font-bebas",
   display: "swap",
 });
@@ -21,6 +20,9 @@ const bebas = Bebas_Neue({
 export const metadata = {
   title: "Torneio de Futsal",
   description: "Site oficial do Torneio de Futsal Veterano",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

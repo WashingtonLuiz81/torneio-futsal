@@ -13,12 +13,12 @@ export default function RegrasPage() {
       {/* Hero */}
       <section className="relative h-[300px] w-full">
         <Image
-          src="/assets/futsal-rules.jpg"
+          src="/assets/futsal-rules.png"
           alt="Regras do Torneio"
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/70 z-10" />
+        <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-4xl md:text-5xl text-white font-bebas uppercase tracking-wide">
             Regulamento Geral
