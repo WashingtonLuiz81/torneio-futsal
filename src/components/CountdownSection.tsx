@@ -1,19 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Clock } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale/pt-BR";
+import tabela from "@/lib/data/tabela.json";
 
-const nextMatchDate = new Date("2025-05-25T08:45:00");
+const matchDurationMinutes = 60;
 
 export const CountdownSection = () => {
-  const [timeLeft, setTimeLeft] = useState<{
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-  }>({
+  const [nextMatchDate, setNextMatchDate] = useState<Date | null>(null);
+  const [status, setStatus] = useState<"countdown" | "live" | "waiting">(
+    "waiting"
+  );
+  const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -21,9 +20,47 @@ export const CountdownSection = () => {
   });
 
   useEffect(() => {
+    // Encontrar o próximo jogo não realizado com data futura
+    const proximaRodada = tabela.find((r) =>
+      r.jogos.some((j) => {
+        const [h, m] = j.hora.split(":");
+        const dataHora = new Date(
+          `${j.data}T${h.padStart(2, "0")}:${m.padStart(2, "0")}:00`
+        );
+        return dataHora > new Date();
+      })
+    );
+
+    if (proximaRodada) {
+      const jogo = proximaRodada.jogos[0]; // pega o primeiro jogo da rodada
+      const [h, m] = jogo.hora.split(":");
+      const dataHora = new Date(
+        `${jogo.data}T${h.padStart(2, "0")}:${m.padStart(2, "0")}:00`
+      );
+      setNextMatchDate(dataHora);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!nextMatchDate) return;
+
     const updateCountdown = () => {
       const now = new Date().getTime();
-      const distance = nextMatchDate.getTime() - now;
+      const start = nextMatchDate.getTime();
+      const end = start + matchDurationMinutes * 60 * 1000;
+
+      if (now >= start && now <= end) {
+        setStatus("live");
+        return;
+      }
+
+      if (now > end) {
+        setStatus("waiting");
+        return;
+      }
+
+      setStatus("countdown");
+      const distance = start - now;
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
@@ -35,9 +72,10 @@ export const CountdownSection = () => {
       setTimeLeft({ days, hours, minutes, seconds });
     };
 
+    updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextMatchDate]);
 
   return (
     <section className="bg-highlight text-white py-16 px-4">
@@ -46,33 +84,48 @@ export const CountdownSection = () => {
           Contagem para a próxima rodada
         </h2>
 
-        <p className="font-sans text-lg mb-8">
-          A bola vai rolar no dia{" "}
-          <strong className="underline">
-            {format(nextMatchDate, "EEEE, dd 'de' MMMM 'às' HH:mm'h'", {
-              locale: ptBR,
-            })}
-          </strong>
-        </p>
+        {status === "countdown" && nextMatchDate && (
+          <>
+            <p className="font-sans text-lg mb-8">
+              A bola vai rolar no dia{" "}
+              <strong className="underline">
+                {format(nextMatchDate, "EEEE, dd 'de' MMMM 'às' HH:mm'h'", {
+                  locale: ptBR,
+                })}
+              </strong>
+            </p>
+            <div className="flex justify-center gap-6 text-4xl font-bold font-mono">
+              <div className="text-center">
+                <p>{String(timeLeft.days).padStart(2, "0")}</p>
+                <span className="text-sm font-sans">dias</span>
+              </div>
+              <div className="text-center">
+                <p>{String(timeLeft.hours).padStart(2, "0")}</p>
+                <span className="text-sm font-sans">horas</span>
+              </div>
+              <div className="text-center">
+                <p>{String(timeLeft.minutes).padStart(2, "0")}</p>
+                <span className="text-sm font-sans">min</span>
+              </div>
+              <div className="text-center">
+                <p>{String(timeLeft.seconds).padStart(2, "0")}</p>
+                <span className="text-sm font-sans">seg</span>
+              </div>
+            </div>
+          </>
+        )}
 
-        <div className="flex justify-center gap-6 text-4xl font-bold font-mono">
-          <div className="text-center">
-            <p>{String(timeLeft.days).padStart(2, "0")}</p>
-            <span className="text-sm font-sans">dias</span>
-          </div>
-          <div className="text-center">
-            <p>{String(timeLeft.hours).padStart(2, "0")}</p>
-            <span className="text-sm font-sans">horas</span>
-          </div>
-          <div className="text-center">
-            <p>{String(timeLeft.minutes).padStart(2, "0")}</p>
-            <span className="text-sm font-sans">min</span>
-          </div>
-          <div className="text-center">
-            <p>{String(timeLeft.seconds).padStart(2, "0")}</p>
-            <span className="text-sm font-sans">seg</span>
-          </div>
-        </div>
+        {status === "live" && (
+          <p className="text-2xl font-bold animate-pulse text-green-300 mt-6">
+            🟢 Bola rolando agora!
+          </p>
+        )}
+
+        {status === "waiting" && (
+          <p className="text-lg italic text-yellow-200 mt-6">
+            ⏳ Aguardando atualização da tabela...
+          </p>
+        )}
       </div>
     </section>
   );
