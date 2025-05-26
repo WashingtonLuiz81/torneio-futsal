@@ -1,22 +1,27 @@
 [
   {
-    "jogador": "Márcio",
+    "jogador": "Marcinho",
     "time": "pcds-fc",
-    "golsSofridos": 5
+    "golsSofridos": 10
   },
   {
     "jogador": "Barrozo",
     "time": "biscoito-fc",
-    "golsSofridos": 6
+    "golsSofridos": 7
   },
   {
-    "jogador": "Wanderson Gabriel",
+    "jogador": "Wanderson",
     "time": "real-madruga-fc",
-    "golsSofridos": 3
+    "golsSofridos": 6
   },
   {
     "jogador": "André",
     "time": "brothers-fc",
     "golsSofridos": 0
+  },
+  {
+    "jogador": "Gustavo Malta",
+    "time": "real-matismo-fc",
+    "golsSofridos": 3
   }
 ]

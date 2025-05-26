@@ -1,8 +1,9 @@
 [
   {
     "id": "gustavo-malta",
-    "nome": "Gustavo Malta",
+    "nome": "Gu",
     "numero": 1,
+    "posicao": "Goleiro",
     "timeId": "real-matismo-fc",
     "avatar": null
   },
@@ -10,6 +11,7 @@
     "id": "rodrigo-baiano",
     "nome": "Rodrigo Baiano",
     "numero": 2,
+    "posicao": "",
     "timeId": "real-matismo-fc",
     "avatar": null
   },
@@ -17,6 +19,7 @@
     "id": "carrara",
     "nome": "Carrara",
     "numero": 3,
+    "posicao": "",
     "timeId": "real-matismo-fc",
     "avatar": null
   },
@@ -24,6 +27,7 @@
     "id": "alex",
     "nome": "Alex",
     "numero": 4,
+    "posicao": "",
     "timeId": "real-matismo-fc",
     "avatar": null
   },
@@ -31,6 +35,7 @@
     "id": "tiago-professor",
     "nome": "Tiago Professor",
     "numero": 5,
+    "posicao": "",
     "timeId": "real-matismo-fc",
     "avatar": null
   },
@@ -38,6 +43,7 @@
     "id": "marcelo-unifape",
     "nome": "Marcelo Unifape",
     "numero": 6,
+    "posicao": "",
     "timeId": "real-matismo-fc",
     "avatar": null
   },
@@ -45,6 +51,7 @@
     "id": "bizo",
     "nome": "Bizo",
     "numero": 7,
+    "posicao": "",
     "timeId": "real-matismo-fc",
     "avatar": null
   },
@@ -52,6 +59,7 @@
     "id": "lisboa",
     "nome": "Lisboa",
     "numero": 8,
+    "posicao": "",
     "timeId": "real-matismo-fc",
     "avatar": null
   },
@@ -59,6 +67,7 @@
     "id": "washington",
     "nome": "Washington",
     "numero": 9,
+    "posicao": "",
     "timeId": "real-matismo-fc",
     "avatar": null
   },
@@ -66,6 +75,7 @@
     "id": "danilo-priante",
     "nome": "Danilo Priante",
     "numero": 10,
+    "posicao": "",
     "timeId": "real-matismo-fc",
     "avatar": null
   },
@@ -73,6 +83,7 @@
     "id": "barrozo",
     "nome": "Barrozo",
     "numero": 1,
+    "posicao": "Goleiro",
     "timeId": "biscoito-fc",
     "avatar": null
   },
@@ -80,6 +91,7 @@
     "id": "gustavo",
     "nome": "Gustavo",
     "numero": 2,
+    "posicao": "",
     "timeId": "biscoito-fc",
     "avatar": null
   },
@@ -87,6 +99,7 @@
     "id": "biscoito",
     "nome": "Biscoito",
     "numero": 3,
+    "posicao": "",
     "timeId": "biscoito-fc",
     "avatar": null
   },
@@ -94,6 +107,7 @@
     "id": "zoinho",
     "nome": "Zóinho",
     "numero": 4,
+    "posicao": "",
     "timeId": "biscoito-fc",
     "avatar": null
   },
@@ -101,6 +115,7 @@
     "id": "bruno-palmeira",
     "nome": "Bruno Palmeira",
     "numero": 5,
+    "posicao": "",
     "timeId": "biscoito-fc",
     "avatar": null
   },
@@ -108,6 +123,7 @@
     "id": "vini",
     "nome": "Vini",
     "numero": 6,
+    "posicao": "",
     "timeId": "biscoito-fc",
     "avatar": null
   },
@@ -115,6 +131,7 @@
     "id": "luiz-piquete",
     "nome": "Luiz Piquete",
     "numero": 7,
+    "posicao": "",
     "timeId": "biscoito-fc",
     "avatar": null
   },
@@ -122,6 +139,7 @@
     "id": "guto-palmeirense",
     "nome": "Guto Palmeirense",
     "numero": 8,
+    "posicao": "",
     "timeId": "biscoito-fc",
     "avatar": null
   },
@@ -129,13 +147,15 @@
     "id": "ze-marcelo",
     "nome": "Zé Marcelo",
     "numero": 9,
+    "posicao": "",
     "timeId": "biscoito-fc",
     "avatar": null
   },
   {
-    "id": "vanderson",
-    "nome": "Vanderson",
+    "id": "wanderson-gabriel",
+    "nome": "Wanderson",
     "numero": 1,
+    "posicao": "Goleiro",
     "timeId": "real-madruga-fc",
     "avatar": null
   },
@@ -143,6 +163,7 @@
     "id": "indinho",
     "nome": "Indinho",
     "numero": 2,
+    "posicao": "",
     "timeId": "real-madruga-fc",
     "avatar": null
   },
@@ -150,6 +171,7 @@
     "id": "toninho",
     "nome": "Toninho",
     "numero": 3,
+    "posicao": "",
     "timeId": "real-madruga-fc",
     "avatar": null
   },
@@ -157,6 +179,7 @@
     "id": "marcio-bozo",
     "nome": "Marcio Bozo",
     "numero": 4,
+    "posicao": "",
     "timeId": "real-madruga-fc",
     "avatar": null
   },
@@ -164,6 +187,7 @@
     "id": "willian",
     "nome": "Willian",
     "numero": 5,
+    "posicao": "",
     "timeId": "real-madruga-fc",
     "avatar": null
   },
@@ -171,6 +195,7 @@
     "id": "gil",
     "nome": "Gil",
     "numero": 6,
+    "posicao": "",
     "timeId": "real-madruga-fc",
     "avatar": null
   },
@@ -178,6 +203,7 @@
     "id": "pom",
     "nome": "Pom",
     "numero": 7,
+    "posicao": "",
     "timeId": "real-madruga-fc",
     "avatar": null
   },
@@ -185,6 +211,7 @@
     "id": "jota-t",
     "nome": "Jota T",
     "numero": 8,
+    "posicao": "",
     "timeId": "real-madruga-fc",
     "avatar": null
   },
@@ -192,6 +219,7 @@
     "id": "fabio-almeiida",
     "nome": "Fabio Almeiida",
     "numero": 9,
+    "posicao": "",
     "timeId": "real-madruga-fc",
     "avatar": null
   },
@@ -199,6 +227,7 @@
     "id": "carlos-souza",
     "nome": "Carlos Souza",
     "numero": 10,
+    "posicao": "",
     "timeId": "real-madruga-fc",
     "avatar": null
   },
@@ -206,6 +235,7 @@
     "id": "marcinho",
     "nome": "Marcinho",
     "numero": 1,
+    "posicao": "Goleiro",
     "timeId": "pcds-fc",
     "avatar": null
   },
@@ -213,6 +243,7 @@
     "id": "thomas",
     "nome": "Thomas",
     "numero": 2,
+    "posicao": "",
     "timeId": "pcds-fc",
     "avatar": null
   },
@@ -220,6 +251,7 @@
     "id": "xandel",
     "nome": "Xandel",
     "numero": 3,
+    "posicao": "",
     "timeId": "pcds-fc",
     "avatar": null
   },
@@ -227,13 +259,15 @@
     "id": "petao",
     "nome": "Petão",
     "numero": 4,
+    "posicao": "",
     "timeId": "pcds-fc",
     "avatar": null
   },
   {
     "id": "julio-taya",
-    "nome": "Julio taya",
+    "nome": "Júlio Taya",
     "numero": 5,
+    "posicao": "",
     "timeId": "pcds-fc",
     "avatar": null
   },
@@ -241,6 +275,7 @@
     "id": "newtinho",
     "nome": "Newtinho",
     "numero": 6,
+    "posicao": "",
     "timeId": "pcds-fc",
     "avatar": null
   },
@@ -248,6 +283,7 @@
     "id": "del",
     "nome": "Del",
     "numero": 7,
+    "posicao": "",
     "timeId": "pcds-fc",
     "avatar": null
   },
@@ -255,6 +291,7 @@
     "id": "crespo",
     "nome": "Crespo",
     "numero": 8,
+    "posicao": "",
     "timeId": "pcds-fc",
     "avatar": null
   },
@@ -262,6 +299,7 @@
     "id": "leonardo-venancio",
     "nome": "Leonardo Venancio",
     "numero": 9,
+    "posicao": "",
     "timeId": "pcds-fc",
     "avatar": null
   },
@@ -269,6 +307,7 @@
     "id": "gutemberg",
     "nome": "Gutemberg",
     "numero": 1,
+    "posicao": "",
     "timeId": "brothers-fc",
     "avatar": null
   },
@@ -276,6 +315,7 @@
     "id": "leo-chulapa",
     "nome": "Léo Chulapa",
     "numero": 2,
+    "posicao": "",
     "timeId": "brothers-fc",
     "avatar": null
   },
@@ -283,6 +323,7 @@
     "id": "ramos",
     "nome": "Ramos",
     "numero": 3,
+    "posicao": "",
     "timeId": "brothers-fc",
     "avatar": null
   },
@@ -290,6 +331,7 @@
     "id": "glauco",
     "nome": "Glauco",
     "numero": 4,
+    "posicao": "",
     "timeId": "brothers-fc",
     "avatar": null
   },
@@ -297,6 +339,7 @@
     "id": "alemao",
     "nome": "Alemão",
     "numero": 5,
+    "posicao": "",
     "timeId": "brothers-fc",
     "avatar": null
   },
@@ -304,6 +347,7 @@
     "id": "jp-lamao",
     "nome": "J P Lamão",
     "numero": 6,
+    "posicao": "",
     "timeId": "brothers-fc",
     "avatar": null
   },
@@ -311,6 +355,7 @@
     "id": "barata",
     "nome": "Barata",
     "numero": 7,
+    "posicao": "",
     "timeId": "brothers-fc",
     "avatar": null
   },
@@ -318,6 +363,7 @@
     "id": "felipe-citro",
     "nome": "Felipe Citro",
     "numero": 8,
+    "posicao": "",
     "timeId": "brothers-fc",
     "avatar": null
   },
@@ -325,6 +371,7 @@
     "id": "bruno-cesar",
     "nome": "Bruno César",
     "numero": 9,
+    "posicao": "",
     "timeId": "brothers-fc",
     "avatar": null
   },
@@ -332,6 +379,7 @@
     "id": "andre",
     "nome": "André",
     "numero": 10,
+    "posicao": "Goleiro",
     "timeId": "brothers-fc",
     "avatar": null
   }

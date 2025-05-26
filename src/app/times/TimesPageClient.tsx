@@ -79,7 +79,10 @@ export default function TimesPage() {
             <h4 className="font-semibold mb-2">Elenco:</h4>
             <ul className="list-disc list-inside">
               {teamPlayers.map((j, i) => (
-                <li key={i}>{j.nome}</li>
+                <li key={i}>
+                  {j.nome}
+                  {j.posicao !== "" ? ` - ${j.posicao}` : ""}
+                </li>
               ))}
             </ul>
           </div>

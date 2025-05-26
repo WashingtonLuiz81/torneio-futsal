@@ -20,21 +20,22 @@ export const CountdownSection = () => {
   });
 
   useEffect(() => {
-    // Encontrar a próxima rodada com `realizada === false`
-    const proximaRodada = tabela.find(
-      (r) =>
-        r.realizada === false &&
-        r.jogos.some((j) => {
+    // Encontrar a próxima rodada FUTURA e NÃO realizada
+    const proximaRodada = tabela.find((r) => {
+      if (!r.realizada) {
+        return r.jogos.some((j) => {
           const [h, m] = j.hora.split(":");
           const dataHora = new Date(
             `${j.data}T${h.padStart(2, "0")}:${m.padStart(2, "0")}:00`
           );
           return dataHora > new Date();
-        })
-    );
+        });
+      }
+      return false;
+    });
 
     if (proximaRodada) {
-      const jogo = proximaRodada.jogos[0]; // pega o primeiro jogo da rodada
+      const jogo = proximaRodada.jogos[0]; // primeiro jogo da rodada
       const [h, m] = jogo.hora.split(":");
       const dataHora = new Date(
         `${jogo.data}T${h.padStart(2, "0")}:${m.padStart(2, "0")}:00`
@@ -79,7 +80,6 @@ export const CountdownSection = () => {
     return () => clearInterval(interval);
   }, [nextMatchDate]);
 
-  // Caso não tenha jogo válido, não renderiza nada
   if (!nextMatchDate) return null;
 
   return (

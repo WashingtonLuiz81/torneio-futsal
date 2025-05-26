@@ -28,7 +28,7 @@ export const Header = () => {
       {/* Logo */}
       <Link
         href="/"
-        className="font-title text-3xl uppercase tracking-wider text-highlight"
+        className="font-bebas text-3xl uppercase tracking-wider text-highlight"
       >
         Futsal 2025
       </Link>
@@ -58,7 +58,7 @@ export const Header = () => {
             </button>
           </DrawerTrigger>
           <DrawerContent className="p-4 bg-white rounded-tl-lg border-none rounded-bl-lg w-4/5 max-w-xs">
-            <DrawerTitle className="text-xl font-title text-secundary mb-4">
+            <DrawerTitle className="text-xl font-bebas text-secundary mb-4">
               Menu
             </DrawerTitle>
             <nav className="flex flex-col gap-4 font-sans text-base font-medium">

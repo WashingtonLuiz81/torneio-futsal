@@ -23,23 +23,23 @@
   },
   {
     "rodada": 2,
-    "realizada": false,
+    "realizada": true,
     "jogos": [
       {
         "casa": "real-matismo-fc",
         "fora": "biscoito-fc",
         "data": "2025-05-25",
         "hora": "08:45",
-        "golsCasa": null,
-        "golsFora": null
+        "golsCasa": 1,
+        "golsFora": 3
       },
       {
         "casa": "real-madruga-fc",
         "fora": "pcds-fc",
         "data": "2025-05-25",
         "hora": "09:45",
-        "golsCasa": null,
-        "golsFora": null
+        "golsCasa": 5,
+        "golsFora": 3
       }
     ]
   },
