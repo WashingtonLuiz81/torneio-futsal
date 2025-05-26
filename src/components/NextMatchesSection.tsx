@@ -24,16 +24,7 @@ const getStatusDoJogo = (data: string, hora: string) => {
 };
 
 export const NextMatchesSection = () => {
-  const proximaRodada = tabela.find((rodada) =>
-    rodada.jogos.some((jogo) => {
-      const [horaStr, minutoStr] = jogo.hora.split(":");
-      const [ano, mes, dia] = jogo.data.split("-").map(Number);
-      const hora = Number(horaStr);
-      const minuto = Number(minutoStr);
-      const dataHora = new Date(ano, mes - 1, dia, hora, minuto);
-      return dataHora > new Date();
-    })
-  );
+  const proximaRodada = tabela.find((rodada) => rodada.realizada === false);
 
   if (!proximaRodada) {
     return (

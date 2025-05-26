@@ -20,15 +20,17 @@ export const CountdownSection = () => {
   });
 
   useEffect(() => {
-    // Encontrar o próximo jogo não realizado com data futura
-    const proximaRodada = tabela.find((r) =>
-      r.jogos.some((j) => {
-        const [h, m] = j.hora.split(":");
-        const dataHora = new Date(
-          `${j.data}T${h.padStart(2, "0")}:${m.padStart(2, "0")}:00`
-        );
-        return dataHora > new Date();
-      })
+    // Encontrar a próxima rodada com `realizada === false`
+    const proximaRodada = tabela.find(
+      (r) =>
+        r.realizada === false &&
+        r.jogos.some((j) => {
+          const [h, m] = j.hora.split(":");
+          const dataHora = new Date(
+            `${j.data}T${h.padStart(2, "0")}:${m.padStart(2, "0")}:00`
+          );
+          return dataHora > new Date();
+        })
     );
 
     if (proximaRodada) {
@@ -77,6 +79,9 @@ export const CountdownSection = () => {
     return () => clearInterval(interval);
   }, [nextMatchDate]);
 
+  // Caso não tenha jogo válido, não renderiza nada
+  if (!nextMatchDate) return null;
+
   return (
     <section className="bg-highlight text-white py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
@@ -84,7 +89,7 @@ export const CountdownSection = () => {
           Contagem para a próxima rodada
         </h2>
 
-        {status === "countdown" && nextMatchDate && (
+        {status === "countdown" && (
           <>
             <p className="font-sans text-lg mb-8">
               A bola vai rolar no dia{" "}
