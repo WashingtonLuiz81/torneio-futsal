@@ -7,7 +7,7 @@
   {
     "jogador": "Niltinho",
     "time": "pcds-fc",
-    "gols": 2
+    "gols": 3
   },
   {
     "jogador": "Thomaz",
@@ -17,17 +17,17 @@
   {
     "jogador": "Júlio Taya",
     "time": "pcds-fc",
-    "gols": 1
+    "gols": 3
   },
   {
     "jogador": "Zé Marcelo",
     "time": "biscoito-fc",
-    "gols": 4
+    "gols": 6
   },
   {
     "jogador": "Gustavo",
     "time": "biscoito-fc",
-    "gols": 2
+    "gols": 5
   },
   {
     "jogador": "Luiz Piquete",
@@ -37,7 +37,7 @@
   {
     "jogador": "Bruno César",
     "time": "brothers-fc",
-    "gols": 2
+    "gols": 3
   },
   {
     "jogador": "Ulisses",
@@ -57,6 +57,6 @@
   {
     "jogador": "Rodrigo Baiano",
     "time": "real-matismo-fc",
-    "gols": 1
+    "gols": 3
   }
 ]

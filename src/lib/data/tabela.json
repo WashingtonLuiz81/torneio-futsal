@@ -45,23 +45,23 @@
   },
   {
     "rodada": 3,
-    "realizada": false,
+    "realizada": true,
     "jogos": [
       {
         "casa": "pcds-fc",
         "fora": "real-matismo-fc",
         "data": "2025-06-01",
         "hora": "08:45",
-        "golsCasa": null,
-        "golsFora": null
+        "golsCasa": 3,
+        "golsFora": 2
       },
       {
         "casa": "biscoito-fc",
         "fora": "brothers-fc",
         "data": "2025-06-01",
         "hora": "09:45",
-        "golsCasa": null,
-        "golsFora": null
+        "golsCasa": 5,
+        "golsFora": 1
       }
     ]
   },

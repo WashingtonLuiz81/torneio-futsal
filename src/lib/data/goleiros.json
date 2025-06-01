@@ -2,12 +2,12 @@
   {
     "jogador": "Marcinho",
     "time": "pcds-fc",
-    "golsSofridos": 10
+    "golsSofridos": 12
   },
   {
     "jogador": "Barrozo",
     "time": "biscoito-fc",
-    "golsSofridos": 7
+    "golsSofridos": 8
   },
   {
     "jogador": "Wanderson",
@@ -17,11 +17,11 @@
   {
     "jogador": "André",
     "time": "brothers-fc",
-    "golsSofridos": 0
+    "golsSofridos": 5
   },
   {
     "jogador": "Gustavo Malta",
     "time": "real-matismo-fc",
-    "golsSofridos": 3
+    "golsSofridos": 6
   }
 ]
