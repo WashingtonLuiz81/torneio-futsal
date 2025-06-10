@@ -8,14 +8,16 @@ import { Artilheiro, Goleiro } from "@/lib/types/types";
 
 const getTimeName = (id: string) =>
   times.find((t) => t.id === id)?.nome || "Time";
+
 const artilheiros = artilheirosData as Artilheiro[];
 const goleiros = goleirosData as Goleiro[];
 
 export const TopPlayersSection = () => {
   const topScorer = artilheiros.sort((a, b) => b.gols - a.gols)[0];
-  const topGoalkeeper = goleiros.sort(
-    (a, b) => a.golsSofridos - b.golsSofridos
-  )[0];
+
+  const topGoalkeeper = goleiros
+    .filter((g) => g.ativo && !g.improvisado)
+    .sort((a, b) => a.golsSofridos - b.golsSofridos)[0];
 
   return (
     <section className="bg-zinc-100 py-20 px-4">
@@ -41,21 +43,29 @@ export const TopPlayersSection = () => {
           </div>
 
           {/* Goleiro menos vazado */}
-          <div className="bg-secundary text-white shadow-md rounded-xl p-6 border-l-4 border-highlight hover:scale-105 transition">
-            <div className="flex items-center gap-4 mb-4 text-highlight">
-              <ShieldCheck className="w-7 h-7" />
-              <h3 className="text-2xl font-bebas uppercase">
-                Goleiro Menos Vazado
-              </h3>
+          {topGoalkeeper ? (
+            <div className="bg-secundary text-white shadow-md rounded-xl p-6 border-l-4 border-highlight hover:scale-105 transition">
+              <div className="flex items-center gap-4 mb-4 text-highlight">
+                <ShieldCheck className="w-7 h-7" />
+                <h3 className="text-2xl font-bebas uppercase">
+                  Goleiro Menos Vazado
+                </h3>
+              </div>
+              <p className="text-xl font-semibold">{topGoalkeeper.jogador}</p>
+              <p className="text-sm text-white/80 mb-2">
+                {getTimeName(topGoalkeeper.time)}
+              </p>
+              <p className="text-lg font-bold">
+                Sofreu {topGoalkeeper.golsSofridos} gols
+              </p>
             </div>
-            <p className="text-xl font-semibold">{topGoalkeeper.jogador}</p>
-            <p className="text-sm text-white/80 mb-2">
-              {getTimeName(topGoalkeeper.time)}
-            </p>
-            <p className="text-lg font-bold">
-              Sofreu {topGoalkeeper.golsSofridos} gols
-            </p>
-          </div>
+          ) : (
+            <div className="bg-secundary text-white shadow-md rounded-xl p-6 border-l-4 border-highlight">
+              <p className="text-white/80 italic">
+                Nenhum goleiro ativo registrado.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>

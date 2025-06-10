@@ -2,36 +2,50 @@
   {
     "jogador": "Marcinho",
     "time": "pcds-fc",
-    "golsSofridos": 17
+    "golsSofridos": 17,
+    "ativo": true,
+    "improvisado": false
   },
   {
     "jogador": "Barrozo",
     "time": "biscoito-fc",
-    "golsSofridos": 8
+    "golsSofridos": 8,
+    "ativo": true,
+    "improvisado": false
   },
   {
     "jogador": "Wanderson",
     "time": "real-madruga-fc",
-    "golsSofridos": 13
+    "golsSofridos": 13,
+    "ativo": true,
+    "improvisado": false
   },
   {
     "jogador": "André",
     "time": "brothers-fc",
-    "golsSofridos": 3
+    "golsSofridos": 3,
+    "ativo": false,
+    "improvisado": false
   },
   {
     "jogador": "Gutemberg",
     "time": "brothers-fc",
-    "golsSofridos": 5
+    "golsSofridos": 5,
+    "ativo": true,
+    "improvisado": false
   },
   {
     "jogador": "Gustavo Malta",
     "time": "real-matismo-fc",
-    "golsSofridos": 10
+    "golsSofridos": 10,
+    "ativo": true,
+    "improvisado": false
   },
   {
     "jogador": "Tiago Damiano",
     "time": "real-matismo-fc",
-    "golsSofridos": 5
+    "golsSofridos": 5,
+    "ativo": true,
+    "improvisado": true
   }
 ]

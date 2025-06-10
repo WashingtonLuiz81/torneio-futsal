@@ -1,4 +1,3 @@
-// app/tabela/page.tsx
 "use client";
 
 import Image from "next/image";
@@ -203,17 +202,44 @@ export default function TabelaPage() {
               </tr>
             </thead>
             <tbody>
-              {goleiros
-                .sort((a, b) => a.golsSofridos - b.golsSofridos)
-                .map((g, i) => (
-                  <tr key={i} className="border-b hover:bg-zinc-50">
-                    <td className="p-2">{g.jogador}</td>
-                    <td className="p-2">{getTime(g.time)?.nome || g.time}</td>
-                    <td className="p-2 text-center">{g.golsSofridos}</td>
-                  </tr>
-                ))}
+              {[...goleiros]
+                .sort((a, b) => {
+                  const prioridade = (g: typeof a) => {
+                    if (g.ativo && !g.improvisado) return 1;
+                    if (g.ativo && g.improvisado) return 2;
+                    return 3;
+                  };
+                  const pA = prioridade(a);
+                  const pB = prioridade(b);
+                  if (pA !== pB) return pA - pB;
+                  return a.golsSofridos - b.golsSofridos;
+                })
+                .map((g, i) => {
+                  const tags = [];
+                  if (g.improvisado) tags.push("Goleiro linha");
+                  if (!g.ativo) tags.push("Inativo");
+                  return (
+                    <tr key={i} className="border-b hover:bg-zinc-50">
+                      <td className="p-2">
+                        {g.jogador}{" "}
+                        {tags.length > 0 && (
+                          <span className="text-xs italic text-zinc-500 ml-1">
+                            ({tags.join(" • ")})
+                          </span>
+                        )}
+                      </td>
+                      <td className="p-2">
+                        {getTime(g.time)?.nome || g.time}
+                      </td>
+                      <td className="p-2 text-center">{g.golsSofridos}</td>
+                    </tr>
+                  );
+                })}
             </tbody>
           </table>
+          <p className="text-xs italic text-zinc-500 mt-2">
+            Obs: Este ranking considera apenas goleiros fixos de cada time (ativos e não improvisados).
+          </p>
         </TabsContent>
       </Tabs>
     </div>

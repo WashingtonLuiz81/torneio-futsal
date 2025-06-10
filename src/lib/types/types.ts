@@ -5,6 +5,8 @@ export type Artilheiro = {
 };
 
 export type Goleiro = {
+  improvisado: boolean
+  ativo: boolean;
   jogador: string;
   time: string;
   golsSofridos: number;
