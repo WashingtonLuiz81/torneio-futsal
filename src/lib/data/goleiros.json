@@ -2,7 +2,7 @@
   {
     "jogador": "Marcinho",
     "time": "pcds-fc",
-    "golsSofridos": 12
+    "golsSofridos": 17
   },
   {
     "jogador": "Barrozo",
@@ -12,16 +12,26 @@
   {
     "jogador": "Wanderson",
     "time": "real-madruga-fc",
-    "golsSofridos": 6
+    "golsSofridos": 13
   },
   {
     "jogador": "André",
+    "time": "brothers-fc",
+    "golsSofridos": 3
+  },
+  {
+    "jogador": "Gutemberg",
     "time": "brothers-fc",
     "golsSofridos": 5
   },
   {
     "jogador": "Gustavo Malta",
     "time": "real-matismo-fc",
-    "golsSofridos": 6
+    "golsSofridos": 10
+  },
+  {
+    "jogador": "Tiago Damiano",
+    "time": "real-matismo-fc",
+    "golsSofridos": 5
   }
 ]

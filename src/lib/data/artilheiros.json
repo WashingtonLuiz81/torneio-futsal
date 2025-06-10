@@ -17,7 +17,12 @@
   {
     "jogador": "Júlio Taya",
     "time": "pcds-fc",
-    "gols": 3
+    "gols": 4
+  },
+  {
+    "jogador": "Peterson",
+    "time": "pcds-fc",
+    "gols": 2
   },
   {
     "jogador": "Zé Marcelo",
@@ -37,10 +42,15 @@
   {
     "jogador": "Bruno César",
     "time": "brothers-fc",
-    "gols": 3
+    "gols": 35
   },
   {
     "jogador": "Ulisses",
+    "time": "brothers-fc",
+    "gols": 2
+  },
+  {
+    "jogador": "Leonardo",
     "time": "brothers-fc",
     "gols": 1
   },
@@ -52,11 +62,36 @@
   {
     "jogador": "Marcio Bozo",
     "time": "real-madruga-fc",
-    "gols": 2
+    "gols": 6
+  },
+  {
+    "jogador": "Wanderson Pom",
+    "time": "real-madruga-fc",
+    "gols": 3
+  },
+  {
+    "jogador": "Indinho",
+    "time": "real-madruga-fc",
+    "gols": 4
   },
   {
     "jogador": "Rodrigo Baiano",
     "time": "real-matismo-fc",
-    "gols": 3
+    "gols": 5
+  },
+  {
+    "jogador": "Danilo",
+    "time": "real-matismo-fc",
+    "gols": 1
+  },
+  {
+    "jogador": "Tiago Damiano",
+    "time": "real-matismo-fc",
+    "gols": 2
+  },
+  {
+    "jogador": "Marcelo",
+    "time": "real-matismo-fc",
+    "gols": 2
   }
 ]

@@ -67,23 +67,23 @@
   },
   {
     "rodada": 4,
-    "realizada": false,
+    "realizada": true,
     "jogos": [
       {
         "casa": "pcds-fc",
         "fora": "brothers-fc",
         "data": "2025-06-08",
         "hora": "08:45",
-        "golsCasa": null,
-        "golsFora": null
+        "golsCasa": 3,
+        "golsFora": 5
       },
       {
         "casa": "real-madruga-fc",
         "fora": "real-matismo-fc",
         "data": "2025-06-08",
         "hora": "09:45",
-        "golsCasa": null,
-        "golsFora": null
+        "golsCasa": 9,
+        "golsFora": 7
       }
     ]
   },
