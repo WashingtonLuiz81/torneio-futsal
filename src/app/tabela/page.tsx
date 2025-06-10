@@ -7,6 +7,7 @@ import tabela from "@/lib/data/tabela.json";
 import times from "@/lib/data/times.json";
 import artilheiros from "@/lib/data/artilheiros.json";
 import goleiros from "@/lib/data/goleiros.json";
+import { Trophy, XCircle } from "lucide-react";
 
 const getTime = (id: string) => times.find((t) => t.id === id);
 
@@ -108,10 +109,17 @@ export default function TabelaPage() {
               </tr>
             </thead>
             <tbody>
-              {classificacao.map((item) => {
+              {classificacao.map((item, index) => {
                 const time = getTime(item.timeId);
+                const rowClass =
+                  index < 4
+                    ? "bg-green-100"
+                    : index === classificacao.length - 1
+                    ? "bg-red-100"
+                    : "";
+
                 return (
-                  <tr key={item.timeId} className="border-b hover:bg-zinc-50">
+                  <tr key={item.timeId} className={`${rowClass} border-b hover:bg-zinc-50`}>
                     <td className="p-2 flex items-center gap-2">
                       <Image
                         src={time?.icone || ""}
@@ -134,6 +142,17 @@ export default function TabelaPage() {
               })}
             </tbody>
           </table>
+
+          <div className="flex items-center gap-4 mt-4 text-sm">
+            <div className="flex items-center gap-1">
+              <Trophy className="w-4 h-4 text-green-600" />
+              <span className="text-green-700">Classificados para a próxima fase</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <XCircle className="w-4 h-4 text-red-600" />
+              <span className="text-red-700">Eliminado</span>
+            </div>
+          </div>
         </TabsContent>
 
         <TabsContent value="jogos">
