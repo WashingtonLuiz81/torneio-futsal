@@ -2,22 +2,39 @@
 
 import goleirosData from "@/lib/data/goleiros.json";
 import artilheirosData from "@/lib/data/artilheiros.json";
+import tabelaData from "@/lib/data/tabela.json";
 import times from "@/lib/data/times.json";
 import { Goal, ShieldCheck } from "lucide-react";
-import { Artilheiro, Goleiro } from "@/lib/types/types";
+import { Artilheiro } from "@/lib/types/types";
 
 const getTimeName = (id: string) =>
   times.find((t) => t.id === id)?.nome || "Time";
 
 const artilheiros = artilheirosData as Artilheiro[];
-const goleiros = goleirosData as Goleiro[];
+const tabela = tabelaData;
 
 export const TopPlayersSection = () => {
   const topScorer = artilheiros.sort((a, b) => b.gols - a.gols)[0];
 
-  const topGoalkeeper = goleiros
-    .filter((g) => g.ativo && !g.improvisado)
-    .sort((a, b) => a.golsSofridos - b.golsSofridos)[0];
+  // Calcular gols sofridos por time
+  const golsSofridosPorTime: Record<string, number> = {};
+
+  tabela.forEach((rodada) => {
+    if (!rodada.realizada) return;
+
+    rodada.jogos.forEach((jogo) => {
+      if (jogo.golsCasa == null || jogo.golsFora == null) return;
+
+      golsSofridosPorTime[jogo.casa] =
+        (golsSofridosPorTime[jogo.casa] || 0) + jogo.golsFora;
+
+      golsSofridosPorTime[jogo.fora] =
+        (golsSofridosPorTime[jogo.fora] || 0) + jogo.golsCasa;
+    });
+  });
+
+  const defesaMenosVazada = Object.entries(golsSofridosPorTime)
+    .sort(([, golsA], [, golsB]) => golsA - golsB)[0];
 
   return (
     <section className="bg-zinc-100 py-20 px-4">
@@ -42,27 +59,26 @@ export const TopPlayersSection = () => {
             <p className="text-lg font-bold">{topScorer.gols} gols</p>
           </div>
 
-          {/* Goleiro menos vazado */}
-          {topGoalkeeper ? (
+          {/* Defesa menos vazada */}
+          {defesaMenosVazada ? (
             <div className="bg-secundary text-white shadow-md rounded-xl p-6 border-l-4 border-highlight hover:scale-105 transition">
               <div className="flex items-center gap-4 mb-4 text-highlight">
                 <ShieldCheck className="w-7 h-7" />
                 <h3 className="text-2xl font-bebas uppercase">
-                  Goleiro Menos Vazado
+                  Defesa Menos Vazada
                 </h3>
               </div>
-              <p className="text-xl font-semibold">{topGoalkeeper.jogador}</p>
-              <p className="text-sm text-white/80 mb-2">
-                {getTimeName(topGoalkeeper.time)}
+              <p className="text-xl font-semibold">
+                {getTimeName(defesaMenosVazada[0])}
               </p>
               <p className="text-lg font-bold">
-                Sofreu {topGoalkeeper.golsSofridos} gols
+                Sofreu {defesaMenosVazada[1]} gols
               </p>
             </div>
           ) : (
             <div className="bg-secundary text-white shadow-md rounded-xl p-6 border-l-4 border-highlight">
               <p className="text-white/80 italic">
-                Nenhum goleiro ativo registrado.
+                Nenhum dado disponível da defesa.
               </p>
             </div>
           )}

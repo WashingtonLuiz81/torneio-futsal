@@ -44,9 +44,17 @@ export const NextMatchesSection = () => {
   return (
     <section className="py-20 px-4 max-w-full">
       <div className="mx-auto max-w-[1024px]">
+        {proximaRodada.fase === 'classificacao' && (
+          <h2 className="text-3xl font-bebas uppercase text-center text-secondary mb-10 tracking-widest">
+            Próximos Jogos - Rodada ${proximaRodada.rodada}
+          </h2>
+        )}
+
+        {proximaRodada.fase === 'semifinal' && (
         <h2 className="text-3xl font-bebas uppercase text-center text-secondary mb-10 tracking-widest">
-          Próximos Jogos - Rodada {proximaRodada.rodada}
-        </h2>
+            Semifinais
+          </h2>
+        )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {proximaRodada.jogos.map((jogo, idx) => {

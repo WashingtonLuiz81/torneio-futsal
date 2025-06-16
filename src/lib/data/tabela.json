@@ -1,6 +1,7 @@
 [
   {
     "rodada": 1,
+    "fase": "Classificacao",
     "realizada": true,
     "jogos": [
       {
@@ -23,6 +24,7 @@
   },
   {
     "rodada": 2,
+    "fase": "Classificacao",
     "realizada": true,
     "jogos": [
       {
@@ -45,6 +47,7 @@
   },
   {
     "rodada": 3,
+    "fase": "Classificacao",
     "realizada": true,
     "jogos": [
       {
@@ -67,6 +70,7 @@
   },
   {
     "rodada": 4,
+    "fase": "Classificacao",
     "realizada": true,
     "jogos": [
       {
@@ -89,23 +93,24 @@
   },
   {
     "rodada": 5,
-    "realizada": false,
+    "fase": "Classificacao",
+    "realizada": true,
     "jogos": [
       {
         "casa": "real-madruga-fc",
         "fora": "biscoito-fc",
         "data": "2025-06-15",
         "hora": "08:45",
-        "golsCasa": null,
-        "golsFora": null
+        "golsCasa": 9,
+        "golsFora": 5
       },
       {
         "casa": "brothers-fc",
         "fora": "real-matismo-fc",
         "data": "2025-06-15",
         "hora": "09:45",
-        "golsCasa": null,
-        "golsFora": null
+        "golsCasa": 3,
+        "golsFora": 4
       }
     ]
   },
@@ -115,7 +120,7 @@
     "realizada": false,
     "jogos": [
       {
-        "casa": "pcds-fc",
+        "casa": "biscoito-fc",
         "fora": "brothers-fc",
         "data": "2025-06-22",
         "hora": "08:45",
@@ -123,8 +128,8 @@
         "golsFora": null
       },
       {
-        "casa": "biscoito-fc",
-        "fora": "real-madruga-fc",
+        "casa": "real-madruga-fc",
+        "fora": "pcds-fc",
         "data": "2025-06-22",
         "hora": "09:45",
         "golsCasa": null,

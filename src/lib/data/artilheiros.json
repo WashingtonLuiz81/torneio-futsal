@@ -32,10 +32,15 @@
   {
     "jogador": "Gustavo",
     "time": "biscoito-fc",
-    "gols": 5
+    "gols": 8
   },
   {
     "jogador": "Luiz Piquete",
+    "time": "biscoito-fc",
+    "gols": 2
+  },
+  {
+    "jogador": "Zoinho",
     "time": "biscoito-fc",
     "gols": 1
   },
@@ -45,9 +50,19 @@
     "gols": 5
   },
   {
+    "jogador": "Ramos",
+    "time": "brothers-fc",
+    "gols": 1
+  },
+  {
+    "jogador": "Barata",
+    "time": "brothers-fc",
+    "gols": 1
+  },
+  {
     "jogador": "Ulisses",
     "time": "brothers-fc",
-    "gols": 3
+    "gols": 4
   },
   {
     "jogador": "Leonardo",
@@ -57,7 +72,12 @@
   {
     "jogador": "Gil",
     "time": "real-madruga-fc",
-    "gols": 3
+    "gols": 6
+  },
+  {
+    "jogador": "Willian Fernando",
+    "time": "real-madruga-fc",
+    "gols": 2
   },
   {
     "jogador": "Marcio Bozo",
@@ -67,12 +87,12 @@
   {
     "jogador": "Wanderson Pom",
     "time": "real-madruga-fc",
-    "gols": 3
+    "gols": 5
   },
   {
     "jogador": "Indinho",
     "time": "real-madruga-fc",
-    "gols": 4
+    "gols": 5
   },
   {
     "jogador": "Rodrigo Baiano",
@@ -92,6 +112,11 @@
   {
     "jogador": "Marcelo",
     "time": "real-matismo-fc",
-    "gols": 1
+    "gols": 2
+  },
+  {
+    "jogador": "Bizo",
+    "time": "real-matismo-fc",
+    "gols": 3
   }
 ]
