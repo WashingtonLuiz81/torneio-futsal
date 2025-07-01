@@ -1,4 +1,3 @@
-// app/tabela/page.tsx
 "use client";
 
 import Image from "next/image";
@@ -7,7 +6,7 @@ import tabela from "@/lib/data/tabela.json";
 import times from "@/lib/data/times.json";
 import artilheiros from "@/lib/data/artilheiros.json";
 import goleiros from "@/lib/data/goleiros.json";
-import { Trophy, XCircle, Medal } from "lucide-react";
+import { Trophy, XCircle, Medal, ShieldCheck } from "lucide-react";
 
 const getTime = (id: string) => times.find((t) => t.id === id);
 
@@ -36,7 +35,7 @@ const calcularClassificacao = () => {
   });
   return times
     .map(t => {
-      const d = stats[t.id] || { j:0,v:0,e:0,d:0,gp:0,gc:0,pts:0 };
+      const d = stats[t.id] || { j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, pts: 0 };
       return { timeId: t.id, ...d, sg: d.gp - d.gc };
     })
     .sort((a, b) => b.pts - a.pts || b.sg - a.sg || b.gp - a.gp);
@@ -66,6 +65,7 @@ export default function TabelaPage() {
           <TabsTrigger value="jogos">🏆 Jogos</TabsTrigger>
           <TabsTrigger value="classificacao">📊 Classificação</TabsTrigger>
           <TabsTrigger value="artilheiros">🥅 Artilheiros</TabsTrigger>
+          <TabsTrigger value="defesa">🛡️ Defesa Menos Vazada</TabsTrigger>
         </TabsList>
 
         <TabsContent value="jogos">
@@ -92,23 +92,17 @@ export default function TabelaPage() {
               </div>
             </TabsContent>
 
-            {/* Mata-mata */}
             <TabsContent value="mata">
               <div className="flex flex-col lg:flex-row items-center gap-8">
-                {/* Semifinais */}
                 <div className="space-y-6 w-full">
                   {faseMata
                     .filter((j) => j.fase === "semifinal")
                     .map((j, i) => (
-                      <div
-                        key={i}
-                        className="bg-white p-6 rounded-lg shadow min-w-[300px]"
-                      >
+                      <div key={i} className="bg-white p-6 rounded-lg shadow min-w-[300px]">
                         <div className="flex flex-row justify-between text-sm text-zinc-500 mb-2">
-                          <span>Semifinal {i+1}</span>
+                          <span>Semifinal {i + 1}</span>
                           <span>{j.hora}h</span>
                         </div>
-
                         <div className="flex justify-between items-center font-semibold text-lg">
                           <span>{getTime(j.casa)?.nome}</span>
                           <span>
@@ -128,14 +122,12 @@ export default function TabelaPage() {
                               "–"
                             )}
                           </span>
-
                           <span>{getTime(j.fora)?.nome}</span>
                         </div>
                       </div>
                     ))}
                 </div>
 
-                {/* Troféu central */}
                 <div className="relative w-full lg:w-1/3 flex justify-center">
                   <Image
                     src="/assets/trofeu.png"
@@ -146,15 +138,11 @@ export default function TabelaPage() {
                   />
                 </div>
 
-                {/* Final e 3º lugar */}
                 <div className="space-y-6 w-full lg:w-1/3">
                   {faseMata
                     .filter((j) => j.fase !== "semifinal")
                     .map((j, i) => (
-                      <div
-                        key={i}
-                        className="bg-white p-6 rounded-lg shadow min-w-[360px]"
-                      >
+                      <div key={i} className="bg-white p-6 rounded-lg shadow min-w-[360px]">
                         <div className="text-sm text-zinc-500 mb-2">
                           {j.fase === "final" ? "Final" : "3º Lugar"}
                         </div>
@@ -168,7 +156,6 @@ export default function TabelaPage() {
                 </div>
               </div>
 
-              {/* Indicadores campeón / terceiro */}
               <div className="mt-6 text-center space-y-2">
                 <div className="text-lg font-semibold">🏅 Campeão: —</div>
                 <div className="text-lg">🥉 3º Lugar: —</div>
@@ -195,19 +182,11 @@ export default function TabelaPage() {
             <tbody>
               {classificacao.map((item, i) => {
                 const time = getTime(item.timeId);
-                const rowBg =
-                  i < 4 ? "bg-green-100" :
-                  i === classificacao.length - 1 ? "bg-red-100" : "";
-
+                const rowBg = i < 4 ? "bg-green-100" : i === classificacao.length - 1 ? "bg-red-100" : "";
                 return (
                   <tr key={i} className={rowBg}>
                     <td className="p-2 flex items-center gap-2">
-                      <Image
-                        src={time?.icone || ""}
-                        alt={time?.nome || ""}
-                        width={24}
-                        height={24}
-                      />
+                      <Image src={time?.icone || ""} alt={time?.nome || ""} width={24} height={24} />
                       {time?.nome}
                     </td>
                     <td className="text-center">{item.pts}</td>
@@ -243,16 +222,38 @@ export default function TabelaPage() {
               </tr>
             </thead>
             <tbody>
-              {artilheiros
-                .slice()
-                .sort((a, b) => b.gols - a.gols)
-                .map((a, i) => (
+              {artilheiros.slice().sort((a, b) => b.gols - a.gols).map((a, i) => (
+                <tr key={i} className="border-b hover:bg-zinc-50">
+                  <td className="p-2">{a.jogador}</td>
+                  <td className="p-2">{getTime(a.time)?.nome || a.time}</td>
+                  <td className="p-2 text-center">{a.gols}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </TabsContent>
+
+        <TabsContent value="defesa">
+          <table className="w-full border-collapse text-sm md:text-base">
+            <thead className="bg-secundary text-white">
+              <tr>
+                <th className="p-2 text-left">Time</th>
+                <th className="p-2 text-center">Gols Sofridos (GC)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {classificacao.slice().sort((a, b) => a.gc - b.gc).map((item, i) => {
+                const time = getTime(item.timeId);
+                return (
                   <tr key={i} className="border-b hover:bg-zinc-50">
-                    <td className="p-2">{a.jogador}</td>
-                    <td className="p-2">{getTime(a.time)?.nome || a.time}</td>
-                    <td className="p-2 text-center">{a.gols}</td>
+                    <td className="p-2 flex items-center gap-2">
+                      <Image src={time?.icone || ""} alt={time?.nome || ""} width={24} height={24} />
+                      {time?.nome}
+                    </td>
+                    <td className="text-center">{item.gc}</td>
                   </tr>
-                ))}
+                );
+              })}
             </tbody>
           </table>
         </TabsContent>
