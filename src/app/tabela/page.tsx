@@ -238,22 +238,27 @@ export default function TabelaPage() {
             <thead className="bg-secundary text-white">
               <tr>
                 <th className="p-2 text-left">Time</th>
-                <th className="p-2 text-center">Gols Sofridos (GC)</th>
+                <th className="p-2 text-center">GC</th>
+                <th className="p-2 text-center">Jogos</th>
               </tr>
             </thead>
             <tbody>
-              {classificacao.slice().sort((a, b) => a.gc - b.gc).map((item, i) => {
-                const time = getTime(item.timeId);
-                return (
-                  <tr key={i} className="border-b hover:bg-zinc-50">
-                    <td className="p-2 flex items-center gap-2">
-                      <Image src={time?.icone || ""} alt={time?.nome || ""} width={24} height={24} />
-                      {time?.nome}
-                    </td>
-                    <td className="text-center">{item.gc}</td>
-                  </tr>
-                );
-              })}
+              {classificacao
+                .slice()
+                .sort((a, b) => b.j - a.j || a.gc - b.gc)
+                .map((item, i) => {
+                  const time = getTime(item.timeId);
+                  return (
+                    <tr key={i} className="border-b hover:bg-zinc-50">
+                      <td className="p-2 flex items-center gap-2">
+                        <Image src={time?.icone || ""} alt={time?.nome || ""} width={24} height={24} />
+                        {time?.nome}
+                      </td>
+                      <td className="text-center">{item.gc}</td>
+                      <td className="text-center">{item.j}</td>
+                    </tr>
+                  );
+                })}
             </tbody>
           </table>
         </TabsContent>
