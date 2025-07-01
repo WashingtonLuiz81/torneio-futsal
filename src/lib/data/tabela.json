@@ -10,7 +10,9 @@
         "data": "2025-05-11",
         "hora": "08:45",
         "golsCasa": 0,
-        "golsFora": 3
+        "golsFora": 3,
+        "penaltiCasa": null,
+        "penaltiFora": null
       },
       {
         "casa": "biscoito-fc",
@@ -18,7 +20,9 @@
         "data": "2025-05-11",
         "hora": "09:45",
         "golsCasa": 5,
-        "golsFora": 6
+        "golsFora": 6,
+        "penaltiCasa": null,
+        "penaltiFora": null
       }
     ]
   },
@@ -33,7 +37,9 @@
         "data": "2025-05-25",
         "hora": "08:45",
         "golsCasa": 1,
-        "golsFora": 3
+        "golsFora": 3,
+        "penaltiCasa": null,
+        "penaltiFora": null
       },
       {
         "casa": "real-madruga-fc",
@@ -41,7 +47,9 @@
         "data": "2025-05-25",
         "hora": "09:45",
         "golsCasa": 5,
-        "golsFora": 3
+        "golsFora": 3,
+        "penaltiCasa": null,
+        "penaltiFora": null
       }
     ]
   },
@@ -56,7 +64,9 @@
         "data": "2025-06-01",
         "hora": "08:45",
         "golsCasa": 3,
-        "golsFora": 2
+        "golsFora": 2,
+        "penaltiCasa": null,
+        "penaltiFora": null
       },
       {
         "casa": "biscoito-fc",
@@ -64,7 +74,9 @@
         "data": "2025-06-01",
         "hora": "09:45",
         "golsCasa": 5,
-        "golsFora": 1
+        "golsFora": 1,
+        "penaltiCasa": null,
+        "penaltiFora": null
       }
     ]
   },
@@ -79,7 +91,9 @@
         "data": "2025-06-08",
         "hora": "08:45",
         "golsCasa": 3,
-        "golsFora": 5
+        "golsFora": 5,
+        "penaltiCasa": null,
+        "penaltiFora": null
       },
       {
         "casa": "real-madruga-fc",
@@ -87,7 +101,9 @@
         "data": "2025-06-08",
         "hora": "09:45",
         "golsCasa": 9,
-        "golsFora": 7
+        "golsFora": 7,
+        "penaltiCasa": null,
+        "penaltiFora": null
       }
     ]
   },
@@ -102,7 +118,9 @@
         "data": "2025-06-15",
         "hora": "08:45",
         "golsCasa": 9,
-        "golsFora": 5
+        "golsFora": 5,
+        "penaltiCasa": null,
+        "penaltiFora": null
       },
       {
         "casa": "brothers-fc",
@@ -110,30 +128,70 @@
         "data": "2025-06-15",
         "hora": "09:45",
         "golsCasa": 3,
-        "golsFora": 4
+        "golsFora": 4,
+        "penaltiCasa": null,
+        "penaltiFora": null
       }
     ]
   },
   {
     "rodada": 6,
     "fase": "semifinal",
-    "realizada": false,
+    "realizada": true,
     "jogos": [
       {
         "casa": "biscoito-fc",
         "fora": "brothers-fc",
         "data": "2025-06-29",
         "hora": "08:45",
-        "golsCasa": null,
-        "golsFora": null
+        "golsCasa": 1,
+        "golsFora": 1,
+        "penaltiCasa":"2",
+        "penaltiFora":"1"
       },
       {
         "casa": "real-madruga-fc",
         "fora": "pcds-fc",
         "data": "2025-06-29",
         "hora": "09:45",
+        "golsCasa": 4,
+        "golsFora": 3,
+        "penaltiCasa": null,
+        "penaltiFora": null
+      }
+    ]
+  },
+  {
+    "rodada": 7,
+    "fase": "3º Lugar",
+    "realizada": false,
+    "jogos": [
+      {
+        "casa": "brothers-fc",
+        "fora": "pcds-fc",
+        "data": "2025-07-06",
+        "hora": "08:45",
         "golsCasa": null,
-        "golsFora": null
+        "golsFora": null,
+        "penaltiCasa": null,
+        "penaltiFora": null
+      }
+    ]
+  },
+  {
+    "rodada": 7,
+    "fase": "final",
+    "realizada": false,
+    "jogos": [
+      {
+        "casa": "biscoito-fc",
+        "fora": "real-madruga-fc",
+        "data": "2025-07-06",
+        "hora": "09:45",
+        "golsCasa": null,
+        "golsFora": null,
+        "penaltiCasa": null,
+        "penaltiFora": null
       }
     ]
   }

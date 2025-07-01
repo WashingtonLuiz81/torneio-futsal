@@ -2,7 +2,7 @@
   {
     "jogador": "Daniel",
     "time": "pcds-fc",
-    "gols": 3
+    "gols": 4
   },
   {
     "jogador": "Niltinho",
@@ -10,9 +10,9 @@
     "gols": 3
   },
   {
-    "jogador": "Thomaz",
+    "jogador": "Thomas",
     "time": "pcds-fc",
-    "gols": 2
+    "gols": 4
   },
   {
     "jogador": "Júlio Taya",
@@ -32,7 +32,7 @@
   {
     "jogador": "Gustavo",
     "time": "biscoito-fc",
-    "gols": 8
+    "gols": 9
   },
   {
     "jogador": "Luiz Piquete",
@@ -62,7 +62,7 @@
   {
     "jogador": "Ulisses",
     "time": "brothers-fc",
-    "gols": 4
+    "gols": 5
   },
   {
     "jogador": "Leonardo",
@@ -72,12 +72,12 @@
   {
     "jogador": "Gil",
     "time": "real-madruga-fc",
-    "gols": 6
+    "gols": 7
   },
   {
     "jogador": "Willian Fernando",
     "time": "real-madruga-fc",
-    "gols": 2
+    "gols": 4
   },
   {
     "jogador": "Marcio Bozo",

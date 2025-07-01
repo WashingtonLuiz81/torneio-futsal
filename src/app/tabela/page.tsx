@@ -111,7 +111,24 @@ export default function TabelaPage() {
 
                         <div className="flex justify-between items-center font-semibold text-lg">
                           <span>{getTime(j.casa)?.nome}</span>
-                          <span>{j.realizada ? `${j.golsCasa} x ${j.golsFora}` : "–"}</span>
+                          <span>
+                            {j.realizada ? (
+                              <>
+                                {j.golsCasa}
+                                {j.penaltiCasa && (
+                                  <sup className="text-xs ml-1 align-super text-red-300">{`(${j.penaltiCasa})`}</sup>
+                                )}
+                                {" x "}
+                                {j.golsFora}
+                                {j.penaltiFora && (
+                                  <sup className="text-xs ml-1 align-super text-red-300">{`(${j.penaltiFora})`}</sup>
+                                )}
+                              </>
+                            ) : (
+                              "–"
+                            )}
+                          </span>
+
                           <span>{getTime(j.fora)?.nome}</span>
                         </div>
                       </div>

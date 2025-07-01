@@ -8,14 +8,11 @@ const getTimeById = (id: string) => times.find((t) => t.id === id);
 
 const getStatusDoJogo = (data: string, hora: string) => {
   const agora = new Date();
-
   const [horaStr, minutoStr] = hora.split(":");
   const [ano, mes, dia] = data.split("-").map(Number);
-  const horaNum = Number(horaStr);
-  const minutoNum = Number(minutoStr);
 
-  const inicio = new Date(ano, mes - 1, dia, horaNum, minutoNum);
-  const fim = new Date(inicio.getTime() + 60 * 60000); // 60 minutos
+  const inicio = new Date(ano, mes - 1, dia, Number(horaStr), Number(minutoStr));
+  const fim = new Date(inicio.getTime() + 60 * 60000); // 60 min duração
 
   if (isNaN(inicio.getTime())) return "invalido";
   if (agora < inicio) return "em_breve";
@@ -24,9 +21,17 @@ const getStatusDoJogo = (data: string, hora: string) => {
 };
 
 export const NextMatchesSection = () => {
-  const proximaRodada = tabela.find((rodada) => rodada.realizada === false);
+  const proximosJogos = tabela
+    .filter((rodada) => rodada.realizada === false)
+    .flatMap((rodada) =>
+      rodada.jogos.map((jogo) => ({
+        ...jogo,
+        rodada: rodada.rodada,
+        fase: rodada.fase,
+      }))
+    );
 
-  if (!proximaRodada) {
+  if (proximosJogos.length === 0) {
     return (
       <section className="py-20 px-4 max-w-full">
         <div className="mx-auto max-w-[1024px] text-center">
@@ -44,29 +49,37 @@ export const NextMatchesSection = () => {
   return (
     <section className="py-20 px-4 max-w-full">
       <div className="mx-auto max-w-[1024px]">
-        {proximaRodada.fase === 'classificacao' && (
-          <h2 className="text-3xl font-bebas uppercase text-center text-secondary mb-10 tracking-widest">
-            Próximos Jogos - Rodada ${proximaRodada.rodada}
-          </h2>
-        )}
-
-        {proximaRodada.fase === 'semifinal' && (
         <h2 className="text-3xl font-bebas uppercase text-center text-secondary mb-10 tracking-widest">
-            Semifinais
-          </h2>
-        )}
+          Próximos Jogos
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-          {proximaRodada.jogos.map((jogo, idx) => {
+          {proximosJogos.map((jogo, idx) => {
             const timeA = getTimeById(jogo.casa);
             const timeB = getTimeById(jogo.fora);
             const status = getStatusDoJogo(jogo.data, jogo.hora);
+
+            // Definição do subtítulo com base na fase
+            let subtitulo = "";
+            if (jogo.fase.toLowerCase() === "classificacao") {
+              subtitulo = `Rodada ${jogo.rodada}`;
+            } else if (jogo.fase.toLowerCase() === "semifinal") {
+              subtitulo = "Semifinal";
+            } else if (jogo.fase.toLowerCase() === "final") {
+              subtitulo = "Grande Final";
+            } else if (jogo.fase.toLowerCase().includes("3º")) {
+              subtitulo = "Disputa de 3º Lugar";
+            }
 
             return (
               <div
                 key={idx}
                 className="w-full bg-white shadow-xl rounded-xl p-6 hover:scale-105 transition-transform duration-300 border-t-4 border-highlight"
               >
+                <div className="text-center text-zinc-500 text-sm mb-4">
+                  {subtitulo}
+                </div>
+
                 <div className="flex items-center justify-center mb-8 text-zinc-600 text-sm font-sans min-h-[20px]">
                   {status === "em_andamento" && (
                     <span className="text-highlight animate-pulse font-bold text-sm">
