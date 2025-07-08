@@ -163,16 +163,16 @@
   },
   {
     "rodada": 7,
-    "fase": "3º Lugar",
-    "realizada": false,
+    "fase": "terceiro",
+    "realizada": true,
     "jogos": [
       {
         "casa": "brothers-fc",
         "fora": "pcds-fc",
         "data": "2025-07-06",
         "hora": "08:45",
-        "golsCasa": null,
-        "golsFora": null,
+        "golsCasa": 2,
+        "golsFora": 6,
         "penaltiCasa": null,
         "penaltiFora": null
       }
@@ -181,15 +181,15 @@
   {
     "rodada": 7,
     "fase": "final",
-    "realizada": false,
+    "realizada": true,
     "jogos": [
       {
         "casa": "biscoito-fc",
         "fora": "real-madruga-fc",
         "data": "2025-07-06",
         "hora": "09:45",
-        "golsCasa": null,
-        "golsFora": null,
+        "golsCasa": 5,
+        "golsFora": 6,
         "penaltiCasa": null,
         "penaltiFora": null
       }

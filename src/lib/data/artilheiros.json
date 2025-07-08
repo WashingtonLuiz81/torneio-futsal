@@ -5,6 +5,11 @@
     "gols": 4
   },
   {
+    "jogador": "Bruno Crespo",
+    "time": "pcds-fc",
+    "gols": 2
+  },
+  {
     "jogador": "Niltinho",
     "time": "pcds-fc",
     "gols": 3
@@ -12,7 +17,7 @@
   {
     "jogador": "Thomas",
     "time": "pcds-fc",
-    "gols": 4
+    "gols": 7
   },
   {
     "jogador": "Júlio Taya",
@@ -22,7 +27,7 @@
   {
     "jogador": "Peterson",
     "time": "pcds-fc",
-    "gols": 2
+    "gols": 3
   },
   {
     "jogador": "Zé Marcelo",
@@ -32,12 +37,12 @@
   {
     "jogador": "Gustavo",
     "time": "biscoito-fc",
-    "gols": 9
+    "gols": 10
   },
   {
     "jogador": "Luiz Piquete",
     "time": "biscoito-fc",
-    "gols": 2
+    "gols": 3
   },
   {
     "jogador": "Zoinho",
@@ -45,12 +50,27 @@
     "gols": 1
   },
   {
+    "jogador": "Guto",
+    "time": "biscoito-fc",
+    "gols": 1
+  },
+  {
+    "jogador": "Biscoito",
+    "time": "biscoito-fc",
+    "gols": 1
+  },
+  {
     "jogador": "Bruno César",
     "time": "brothers-fc",
-    "gols": 5
+    "gols": 6
   },
   {
     "jogador": "Ramos",
+    "time": "brothers-fc",
+    "gols": 1
+  },
+  {
+    "jogador": "Anderson Barata",
     "time": "brothers-fc",
     "gols": 1
   },
@@ -72,12 +92,12 @@
   {
     "jogador": "Gil",
     "time": "real-madruga-fc",
-    "gols": 7
+    "gols": 9
   },
   {
     "jogador": "Willian Fernando",
     "time": "real-madruga-fc",
-    "gols": 4
+    "gols": 6
   },
   {
     "jogador": "Marcio Bozo",
@@ -97,7 +117,7 @@
   {
     "jogador": "Indinho",
     "time": "real-madruga-fc",
-    "gols": 5
+    "gols": 6
   },
   {
     "jogador": "Rodrigo Baiano",
